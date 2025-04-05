@@ -1,0 +1,35 @@
+Languages:
+    - Python (Core language for all implementations)
+
+Libraries:
+    Pre-installed:
+        - CSV (for lightweight data storage)
+        - JSON (for structured data storage and exchange)
+        - SQLite3 (for database management)
+        - Hashlib (for password security hashing)
+        - Random (for generating random numbers, names, and other values)
+        - OS (for file and directory operations)
+        - Shutil (for file management and organization)
+
+    To Install:
+        - Pandas (for data handling and storage)
+        - Requests (for API interactions)
+        - BeautifulSoup (for web scraping if needed)
+        - Matplotlib (for data visualization)
+        - NumPy (for numerical computations)
+        - NLTK (for natural language processing)
+        - PyInputPlus (for enhanced user input handling)
+        - Cryptography (for encryption in secure storage systems)
+
+APIs:
+    - Free Dictionary API (for word definitions)
+      	>> URL: https://api.dictionaryapi.dev/api/v2/entries/en/<word>
+    - Have I Been Pwned API (for password breach checking)
+      	>> URL: https://haveibeenpwned.com/api/v3
+    - Exchange Rate API (For real-time currency conversion)
+      	>> URL: https://v6.exchangerate-api.com/v6/YOUR-API-KEY/latest/USD
+
+Usage:
+    - Handles data management, file organization, note-taking, task scheduling, tracking expenses, and security storage.
+    - Includes simple AI-based utilities such as sentiment analysis, text summarization, and random generators.
+    - Leverages APIs for additional functionalities like word definitions and password security checks.
