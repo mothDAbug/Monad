@@ -1,0 +1,11 @@
+- Conversion Tools (Unit Converter, Currency Converter, Text Case Converter)
+- Basic Generators (Random Name Generator, Lorem Ipsum Generator)
+- Data Management System (Student / Inventory / Records - Management System)
+- File Management System (Local File Organizer, Duplicate Finder)
+- Task Manager (To-Do List, Task Scheduler, Habit Tracker, Reminder System)
+- Tracking-Based Apps (Expense / Time / Goal - Tracker)
+- Notes App
+- Secure Storage System (Password Manager, Digital Vault, API Key Manager)
+- Sentiment Analyzer
+- Text Summarizer
+- Number Guessing Game
