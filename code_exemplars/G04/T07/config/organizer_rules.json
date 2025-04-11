@@ -1,0 +1,15 @@
+{
+  "description": "Default rules for organizing files by common types.",
+  "rules_by_extension": {
+    "Images": ["jpg", "jpeg", "png", "gif", "bmp", "tiff", "svg", "webp", "heic"],
+    "Documents": ["doc", "docx", "pdf", "txt", "rtf", "odt", "xls", "xlsx", "ppt", "pptx", "csv", "epub", "md"],
+    "Audio": ["mp3", "wav", "aac", "flac", "ogg", "m4a"],
+    "Video": ["mp4", "mov", "avi", "mkv", "wmv", "flv", "webm"],
+    "Archives": ["zip", "rar", "tar", "gz", "7z", "bz2"],
+    "Executables": ["exe", "msi", "dmg", "app"],
+    "Code": ["py", "js", "html", "css", "java", "c", "cpp", "php", "rb", "go", "json", "xml", "yaml", "sh"],
+    "Other": []
+  },
+  "use_other_folder": true,
+  "other_folder_name": "Miscellaneous"
+}

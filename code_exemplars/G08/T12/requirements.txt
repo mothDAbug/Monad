@@ -1,0 +1,2 @@
+pyinputplus>=0.2.12
+cryptography>=3.4.0

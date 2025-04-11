@@ -1,0 +1,2 @@
+pyinputplus>=0.2.12
+requests>=2.25.0  # For optional dictionary validation
