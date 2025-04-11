@@ -1,0 +1,11 @@
+{
+    "total_games_played": 1,
+    "total_wins": 1,
+    "total_losses": 0,
+    "total_guesses_made": 6,
+    "average_guesses_per_win": 6.0,
+    "guess_distribution": {
+        "6": 1
+    },
+    "total_guesses_in_wins": 6
+}

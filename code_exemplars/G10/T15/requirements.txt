@@ -1,0 +1,2 @@
+pyinputplus>=0.2.12
+matplotlib>=3.3.0
