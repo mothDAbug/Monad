@@ -1,23 +1,17 @@
-# Core Agent Framework
-crewai==0.35.8        # The main library for defining agents, tasks, and crews.
+# AI brain
+google-generativeai==0.8.4          # Official library for Gemini models
 
-# Language Model Interaction & Orchestration
-langchain==0.2.0      # Core Langchain library for building context-aware reasoning applications.
-langchain-openai==0.1.7 # OpenAI specific integrations for Langchain (LLMs, Embeddings).
-                      # Replace/add others (e.g., langchain-huggingface) if using different model providers.
-langchain-community==0.2.0 # Community-maintained integrations (vector stores, document loaders, etc.).
-
-# Vector Store (Local Option)
-chromadb==0.5.0       # Vector database for local embedding storage and retrieval (RAG).
+# Agentic Workflow
+langchain==0.3.23
+langchain-community==0.3.21         # Extra tools for document processing  
+langchain-google-genai==2.0.10      # Integration of Gemini with LangChain 
 
 # Embeddings Generation
-sentence-transformers==2.7.0 # Efficient library for generating text embeddings.
+sentence-transformers==2.7.0        # Efficient library for generating text embeddings.
 
-# Environment Variable Management
-python-dotenv==1.0.1  # For loading API keys and configurations from a .env file.
+# Vector Database  
+chromadb==1.0.3                     # Stores conversation history and memory
 
-# --- Optional, but potentially useful for the framework itself ---
-# Add libraries here if your *simulation code* needs them, e.g., for complex input parsing or output handling.
-# Example:
-# pyyaml==6.0.1         # If you use YAML for configuration files.
-# rich==13.7.1          # For enhanced terminal output formatting (useful for verbose logging).
+# Utils
+python-dotenv==1.1.0                # Manage environment variables
+pydantic==2.11.3                    # Data validation and settings management
