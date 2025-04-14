@@ -1,0 +1,701 @@
+[
+    {
+        "template_group_id": "G01",
+        "group_name": "Conversion Tools",
+        "description": "A collection of versatile utilities designed for converting data between various formats, units, and standards. Essential tools for data processing, internationalization, and scientific calculations.",
+        "templates": [
+            {
+                "project_id": "T01",
+                "project_name": "Unit Converter",
+                "description": "A comprehensive and user-friendly tool for accurately converting between a wide array of measurement units. Supports length (meters, feet, miles), weight/mass (kg, pounds, ounces), temperature (Celsius, Fahrenheit, Kelvin), volume (liters, gallons), speed, pressure, energy, and more. Ideal for students, engineers, scientists, and everyday use requiring precise unit translation across metric, imperial, and other systems.",
+                "components": [
+                    {
+                        "component_id": "C01",
+                        "component_name": "Unit Conversion System",
+                        "features": [
+                            "Convert between dozens of units across multiple categories (length, mass, temp, etc.).",
+                            "Support for standard metric (SI) and imperial systems, plus specialized units.",
+                            "High-precision calculations using appropriate conversion factors.",
+                            "Intuitive command-line interface utilizing PyInputPlus for robust input.",
+                            "Handles common and scientific unit conversions seamlessly.",
+                            "Optional history tracking of recent conversions via simple JSON storage.",
+                            "Can be integrated as a backend module for larger applications."
+                        ]
+                    }
+                ],
+                "core_features": [],
+                "required_libraries": [
+                    "json",
+                    "math",
+                    "pyinputplus"
+                ],
+                "api_integrations": [],
+                "database": "None (Optional JSON for history)",
+                "code_template": "code_exemplars/G01/T01/unit_converter_core.py"
+            },
+            {
+                "project_id": "T02",
+                "project_name": "Currency Converter",
+                "description": "A real-time currency conversion tool that fetches up-to-date exchange rates from a reliable API. Allows users to quickly convert amounts between numerous world currencies. Essential for finance, travel planning, e-commerce, and international business applications.",
+                "components": [
+                    {
+                        "component_id": "C01",
+                        "component_name": "Currency Exchange System",
+                        "features": [
+                            "Fetches real-time exchange rates via external API (e.g., Exchange Rate API).",
+                            "Supports conversion between a vast list of global currencies (USD, EUR, JPY, GBP, etc.).",
+                            "Interactive command-line interface for easy amount and currency input.",
+                            "Implements local caching of exchange rates (using JSON) for offline use or rate limiting.",
+                            "Handles API key management securely.",
+                            "Provides accurate and current foreign exchange (Forex) conversions."
+                        ]
+                    }
+                ],
+                "core_features": [],
+                "required_libraries": [
+                    "requests",
+                    "json",
+                    "pyinputplus"
+                ],
+                "api_integrations": [
+                    "Exchange Rate API (or similar Forex API, e.g., https://v6.exchangerate-api.com/v6/YOUR-API-KEY/latest/USD)"
+                ],
+                "database": "None (JSON for caching)",
+                "code_template": "code_exemplars/G01/T02/currency_exchange_system.py"
+            },
+            {
+                "project_id": "T03",
+                "project_name": "Text Case Converter",
+                "description": "A flexible utility for transforming text strings between various common casing conventions. Supports uppercase, lowercase, title case, sentence case, camelCase, PascalCase, snake_case, kebab-case, and more. Useful for programming, data cleaning, content editing, and text normalization tasks.",
+                "components": [
+                    {
+                        "component_id": "C01",
+                        "component_name": "Text Transformer Engine",
+                        "features": [
+                            "Convert text to numerous cases: UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, kebab-case.",
+                            "User-friendly command-line interface for inputting text and selecting conversion type.",
+                            "Option for batch processing text from files or multiple inputs.",
+                            "Handles various edge cases and punctuation appropriately during conversion.",
+                            "Optional integration with Free Dictionary API for word validation (e.g., ensuring snake_case splits are valid words).",
+                            "Useful for code variable naming conventions and text data standardization."
+                        ]
+                    }
+                ],
+                "core_features": [],
+                "required_libraries": [
+                    "json",
+                    "pyinputplus",
+                    "requests"
+                ],
+                "api_integrations": [
+                    "Optional: Free Dictionary API (https://api.dictionaryapi.dev/api/v2/entries/en/<word>)"
+                ],
+                "database": "None",
+                "code_template": "code_exemplars/G01/T03/text_transformer.py"
+            }
+        ]
+    },
+    {
+        "template_group_id": "G02",
+        "group_name": "Basic Generators",
+        "description": "A suite of simple yet powerful generators for creating random or placeholder data, commonly needed for testing, development, and content creation.",
+        "templates": [
+            {
+                "project_id": "T04",
+                "project_name": "Random Name Generator",
+                "description": "Generates realistic-sounding random names (first, last, or full) based on configurable parameters, potentially drawing from diverse cultural origins. Ideal for creating test user data, character names in games or stories, or anonymizing datasets.",
+                "components": [
+                    {
+                        "component_id": "C01",
+                        "component_name": "Name Generation Engine",
+                        "features": [
+                            "Generate random first names, last names, or full names.",
+                            "Option to use culturally diverse name lists (requires appropriate data sources).",
+                            "Customizable output format and quantity.",
+                            "Simple command-line interface for generating names on demand.",
+                            "Ability to save generated lists of names to a text file.",
+                            "Useful for populating databases with test data or for creative writing prompts."
+                        ]
+                    }
+                ],
+                "core_features": [],
+                "required_libraries": [
+                    "random",
+                    "json",
+                    "os",
+                    "pyinputplus"
+                ],
+                "api_integrations": [],
+                "database": "None (Uses internal lists or JSON data files)",
+                "code_template": "code_exemplars/G02/T04/name_generator_engine.py"
+            },
+            {
+                "project_id": "T05",
+                "project_name": "Lorem Ipsum Generator",
+                "description": "Creates placeholder text ('Lorem Ipsum' or similar dummy content) for use in design mockups, website layouts, and application development before final content is ready. Allows customization of text length and format.",
+                "components": [
+                    {
+                        "component_id": "C01",
+                        "component_name": "Lorem Ipsum Factory",
+                        "features": [
+                            "Generate specified number of paragraphs, sentences, or words of Lorem Ipsum text.",
+                            "Customizable length parameters for generated content.",
+                            "Output formats include plain text, basic HTML (with <p> tags), or Markdown.",
+                            "Command-line interface for easy generation.",
+                            "Option to save the generated dummy text directly to a file.",
+                            "Essential tool for web designers, UI/UX developers, and graphic artists."
+                        ]
+                    }
+                ],
+                "core_features": [],
+                "required_libraries": [
+                    "random",
+                    "json",
+                    "pyinputplus"
+                ],
+                "api_integrations": [],
+                "database": "None",
+                "code_template": "code_exemplars/G02/T05/lorem_ipsum_factory.py"
+            }
+        ]
+    },
+    {
+        "template_group_id": "G03",
+        "group_name": "Data Management Systems",
+        "description": "Robust, database-backed systems providing Create, Read, Update, Delete (CRUD) functionality for managing structured data. Adaptable frameworks for various record-keeping needs.",
+        "templates": [
+            {
+                "project_id": "T06",
+                "project_name": "Universal Management System",
+                "description": "A highly configurable and adaptable framework designed as a foundation for various data management applications. Provides core CRUD functionalities that can be specialized for managing students, inventory, general records, or completely custom data structures. Includes features for data analysis, visualization, and reporting.",
+                "components": [
+                    {
+                        "component_id": "C01",
+                        "component_name": "Student Management Module",
+                        "features": [
+                            "Store and manage detailed student academic records (ID, name, grade, contact info, etc.).",
+                            "Track student attendance, log participation, and generate absence reports.",
+                            "Record grades, calculate averages/GPA, and manage performance metrics.",
+                            "Basic performance visualization (e.g., grade trends) using Matplotlib.",
+                            "Suitable for educational institutions or tutoring centers."
+                        ]
+                    },
+                    {
+                        "component_id": "C02",
+                        "component_name": "Inventory Management Module",
+                        "features": [
+                            "Catalog inventory items with details (SKU/ID, name, description, quantity, price).",
+                            "Track stock levels, set reorder points, and generate low-stock alerts.",
+                            "Manage supplier information (names, contacts, items supplied).",
+                            "Record sales and purchase transactions affecting stock.",
+                            "Ideal for small businesses, shops, or personal collection management."
+                        ]
+                    },
+                    {
+                        "component_id": "C03",
+                        "component_name": "Records Management Module",
+                        "features": [
+                            "Store general-purpose records or documents with metadata (ID, title, content snippet, category, tags).",
+                            "Implement advanced search functionality using multiple criteria (keywords, category, tags, date ranges).",
+                            "Efficiently categorize and tag records for better organization and retrieval.",
+                            "Basic version control or history tracking for record updates.",
+                            "Useful for knowledge bases, document archiving, or research notes."
+                        ]
+                    },
+                    {
+                        "component_id": "C04",
+                        "component_name": "Custom Management Module",
+                        "features": [
+                            "Define entirely custom data structures and fields tailored to specific needs.",
+                            "Create custom fields and relationships between data types.",
+                            "Design basic custom workflows or state transitions for records.",
+                            "Build simple custom reports based on user-defined data schemas.",
+                            "Provides a flexible framework for building bespoke CRUD applications from a common base."
+                        ]
+                    }
+                ],
+                "core_features": [
+                    "Solid foundation providing Create, Read, Update, Delete (CRUD) operations.",
+                    "Foundation for building custom CRUD frameworks.",
+                    "Built-in data visualization capabilities using Matplotlib for charts and graphs.",
+                    "Data export functionality to CSV format for interoperability and external analysis.",
+                    "Robust searching and filtering mechanisms across records.",
+                    "Basic statistical analysis and reporting features for managed data.",
+                    "Adaptable code structure allowing easy modification or extension."
+                ],
+                "required_libraries": [
+                    "sqlite3",
+                    "json",
+                    "os",
+                    "csv",
+                    "matplotlib",
+                    "pyinputplus"
+                ],
+                "api_integrations": [],
+                "database": "SQLite (Relational)",
+                "code_template": "code_exemplars/G03/T06/universal_management_system.py"
+            }
+        ]
+    },
+    {
+        "template_group_id": "G04",
+        "group_name": "File Management Systems",
+        "description": "Utilities designed to help organize, clean up, and manage files and directories on a local computer system.",
+        "templates": [
+            {
+                "project_id": "T07",
+                "project_name": "File Organizer",
+                "description": "An automated tool for decluttering and structuring directories by sorting files into folders based on user-defined rules (e.g., file type, creation date, name patterns). Helps maintain an organized file system.",
+                "components": [
+                    {
+                        "component_id": "C01",
+                        "component_name": "File Organizer System",
+                        "features": [
+                            "Automated file sorting based on customizable criteria",
+                            "Intelligent file classification by content",
+                            "Scheduled automatic organization"
+                        ]
+                    }
+                ],
+                "core_features": [
+                    "File tagging and metadata management",
+                    "Configuration storage in JSON files",
+                    "Advanced search capabilities",
+                    "Batch file operations"
+                ],
+                "required_libraries": [
+                    "os",
+                    "shutil",
+                    "json",
+                    "datetime",
+                    "pyinputplus"
+                ],
+                "api_integrations": [],
+                "database": "JSON",
+                "code_template": "code_exemplars/G04/T07/file_organizer.py"
+            },
+            {
+                "project_id": "T08",
+                "project_name": "Duplicate File Finder",
+                "description": "A utility that scans specified directories to identify duplicate files, primarily by comparing file content hashes (like MD5 or SHA1). Helps recover disk space and reduce file redundancy.",
+                "components": [
+                    {
+                        "component_id": "C01",
+                        "component_name": "Duplicate Finder System",
+                        "features": [
+                            "Scan directories for duplicate files using content hashing",
+                            "Analyze file similarities beyond exact matches",
+                            "Multiple options for duplicate management (delete, move, symlink)"
+                        ]
+                    }
+                ],
+                "core_features": [
+                    "File tagging and metadata management",
+                    "Configuration storage in JSON files",
+                    "Advanced search capabilities",
+                    "Batch file operations"
+                ],
+                "required_libraries": [
+                    "os",
+                    "shutil",
+                    "json",
+                    "hashlib",
+                    "pyinputplus"
+                ],
+                "api_integrations": [],
+                "database": "JSON",
+                "code_template": "code_exemplars/G04/T08/duplicate_finder.py"
+            }
+        ]
+    },
+    {
+        "template_group_id": "G05",
+        "group_name": "Task Management Systems",
+        "description": "Applications focused on personal productivity, helping users organize tasks, manage schedules, and receive timely reminders.",
+        "templates": [
+            {
+                "project_id": "T09",
+                "project_name": "Task Management System",
+                "description": "A comprehensive personal productivity application combining a to-do list, task scheduler, and reminder system into one integrated package. Designed to help users manage daily tasks, schedule events, and stay on top of deadlines.",
+                "components": [
+                    {
+                        "component_id": "C01",
+                        "component_name": "To-Do List Manager",
+                        "features": [
+                            "Create, update, and delete tasks efficiently.",
+                            "Organize tasks using categories, projects, or tags.",
+                            "Assign priority levels (e.g., high, medium, low) and due dates.",
+                            "Track task status (e.g., pending, in-progress, completed).",
+                            "Support for subtasks or checklists within a main task."
+                        ]
+                    },
+                    {
+                        "component_id": "C02",
+                        "component_name": "Task Scheduler",
+                        "features": [
+                            "Schedule tasks or events for specific dates and times.",
+                            "Basic handling for recurring tasks (daily, weekly, monthly).",
+                            "Potential for desktop notifications for upcoming scheduled items (requires platform-specific libraries or external tools).",
+                            "View scheduled items in a list or potentially a simple calendar layout."
+                        ]
+                    },
+                    {
+                        "component_id": "C03",
+                        "component_name": "Reminder System",
+                        "features": [
+                            "Set reminders associated with tasks or standalone events.",
+                            "Configure reminder lead times (e.g., 1 hour before, 1 day before).",
+                            "Support for multiple reminders per item.",
+                            "Trigger desktop notifications or alerts (integration depends on libraries/OS)."
+                        ]
+                    }
+                ],
+                "core_features": [
+                    "Robust filtering and sorting of tasks/items by due date, priority, category, etc.",
+                    "Persistent data storage using a reliable SQLite database.",
+                    "Option to export task lists or schedules to CSV format.",
+                    "Simple calendar view representation of scheduled tasks/events.",
+                    "Potential for basic data visualization (e.g., task completion rates) via Matplotlib."
+                ],
+                "required_libraries": [
+                    "json",
+                    "os",
+                    "datetime",
+                    "csv",
+                    "pyinputplus",
+                    "sqlite3",
+                    "matplotlib"
+                ],
+                "api_integrations": [],
+                "database": "SQLite",
+                "code_template": "code_exemplars/G05/T09/task_manager.py"
+            }
+        ]
+    },
+    {
+        "template_group_id": "G06",
+        "group_name": "Tracking Applications",
+        "description": "A suite of applications designed for logging, monitoring, and analyzing various personal or professional activities and metrics over time.",
+        "templates": [
+            {
+                "project_id": "T10",
+                "project_name": "Universal Tracker System",
+                "description": "A highly flexible and adaptable framework for tracking diverse metrics such as expenses, work time, personal goals, habits, or any other quantifiable custom data. Features robust data entry, reporting, and visualization capabilities.",
+                "components": [
+                    {
+                        "component_id": "C01",
+                        "component_name": "Expense Tracker Module",
+                        "features": [
+                            "Log expenses with details: amount, date, category, notes, currency.",
+                            "Define and manage spending categories (e.g., Food, Transport, Bills).",
+                            "Set budgets per category or overall, with alerts for overspending.",
+                            "Generate financial reports (spending by category, daily/weekly/monthly summaries).",
+                            "Support for multiple currencies (manual conversion or potential API integration)."
+                        ]
+                    },
+                    {
+                        "component_id": "C02",
+                        "component_name": "Time Tracker Module",
+                        "features": [
+                            "Log time entries associated with specific projects, tasks, or clients.",
+                            "Manual entry of time blocks (start/end times or duration).",
+                            "Optional simple timer functionality for real-time tracking.",
+                            "Generate timesheet reports suitable for client invoicing or productivity analysis.",
+                            "Categorize time entries for detailed reporting."
+                        ]
+                    },
+                    {
+                        "component_id": "C03",
+                        "component_name": "Goal Tracker Module",
+                        "features": [
+                            "Define SMART (Specific, Measurable, Achievable, Relevant, Time-bound) goals.",
+                            "Break down goals into smaller, trackable milestones or sub-goals.",
+                            "Set deadlines and track progress using quantitative or qualitative metrics.",
+                            "Visualize goal progress over time.",
+                            "Provides statistics on goal achievement rates."
+                        ]
+                    },
+                    {
+                        "component_id": "C04",
+                        "component_name": "Custom Metric Tracker Module",
+                        "features": [
+                            "Define and configure custom metrics to track (e.g., mood, pages read, water intake, workout duration).",
+                            "Log data points for custom metrics with timestamps and optional notes.",
+                            "Create tailored views and reports for analyzing custom tracked data.",
+                            "Highly flexible for various 'quantified self' or specific data logging needs."
+                        ]
+                    },
+                    {
+                        "component_id": "C05",
+                        "component_name": "Habit Tracker Module",
+                        "features": [
+                            "Define habits to track daily or on specific schedules.",
+                            "Mark habits as completed each day/period.",
+                            "Automatic streak calculation and tracking for consistency.",
+                            "Visualize habit completion rates and streaks using graphs (Matplotlib).",
+                            "Motivational statistics and potential for simple achievement badges."
+                        ]
+                    }
+                ],
+                "core_features": [
+                    "User-friendly interface for detailed data entry and management across modules.",
+                    "Generation of comprehensive reports with customizable time ranges (daily, weekly, monthly, custom).",
+                    "Data visualization using Matplotlib for trends, charts, and progress overview.",
+                    "Export logged data to CSV format for backup or use in external tools (spreadsheets, etc.).",
+                    "Effective categorization and filtering capabilities for all tracked data."
+                ],
+                "required_libraries": [
+                    "sqlite3",
+                    "json",
+                    "matplotlib",
+                    "datetime",
+                    "os",
+                    "csv",
+                    "pyinputplus"
+                ],
+                "api_integrations": [],
+                "database": "SQLite",
+                "code_template": "code_exemplars/G06/T10/universal_tracking_system.py"
+            }
+        ]
+    },
+    {
+        "template_group_id": "G07",
+        "group_name": "Notes Application",
+        "description": "Digital note-taking solution for capturing, organizing, and retrieving information.",
+        "templates": [
+            {
+                "project_id": "T11",
+                "project_name": "Notes App",
+                "description": "A feature-rich digital notebook application for creating, organizing, searching, and securing personal or professional notes. Supports text formatting, tagging, and optional encryption for sensitive information.",
+                "components": [
+                    {
+                        "component_id": "C01",
+                        "component_name": "Note Management System",
+                        "features": [
+                            "Create, view, edit, and delete notes.",
+                            "Supports basic rich text formatting (e.g., bold, italics, lists - depending on implementation).",
+                            "Organize notes using tags, categories, or hierarchical notebooks.",
+                            "Powerful search functionality across note titles and content with filters.",
+                            "Optional AES encryption for individual notes containing sensitive data.",
+                            "Import notes from plain text files and export notes to various formats (text, markdown).",
+                            "Basic note versioning or history tracking to revert changes."
+                        ]
+                    }
+                ],
+                "core_features": [],
+                "required_libraries": [
+                    "json",
+                    "os",
+                    "datetime",
+                    "pyinputplus",
+                    "cryptography",
+                    "sqlite3"
+                ],
+                "api_integrations": [],
+                "database": "SQLite",
+                "code_template": "code_exemplars/G07/T11/notekeeper_pro.py"
+            }
+        ]
+    },
+    {
+        "template_group_id": "G08",
+        "group_name": "Secure Storage Systems",
+        "description": "Applications dedicated to securely storing sensitive information like passwords, files, and API keys using strong encryption.",
+        "templates": [
+            {
+                "project_id": "T12",
+                "project_name": "Digital Vault & API Key Manager",
+                "description": "A secure, encrypted repository for storing confidential files, documents, and sensitive API keys or secrets. Employs strong encryption standards and access controls.",
+                "components": [
+                    {
+                        "component_id": "C01",
+                        "component_name": "Digital Vault Module",
+                        "features": [
+                            "Securely store various file types (documents, images, etc.) within an encrypted container.",
+                            "Utilizes robust AES-256 encryption for data at rest.",
+                            "Organize stored files using folders, categories, or tags.",
+                            "Option for secure file sharing with features like password protection or time-limited access (conceptual).",
+                            "Provides a safe digital space for confidential information."
+                        ]
+                    },
+                    {
+                        "component_id": "C02",
+                        "component_name": "API Key Management Module",
+                        "features": [
+                            "Dedicated secure storage for API keys, tokens, and other developer secrets.",
+                            "Encrypts stored keys using strong cryptographic methods.",
+                            "Logs access or usage of stored keys (optional).",
+                            "Track key expiry dates and set rotation reminders.",
+                            "Centralized management for sensitive application credentials."
+                        ]
+                    }
+                ],
+                "core_features": [
+                    "Requires master password authentication, securely hashed (e.g., Argon2, PBKDF2).",
+                    "Potential for multi-factor authentication (MFA/2FA) integration (conceptual).",
+                    "Maintains access logs and audit trails for security monitoring.",
+                    "Features for creating encrypted backups and secure recovery procedures.",
+                    "Automatic session timeout or locking for enhanced security after inactivity."
+                ],
+                "required_libraries": [
+                    "sqlite3",
+                    "cryptography",
+                    "json",
+                    "os",
+                    "hashlib",
+                    "requests",
+                    "pyinputplus",
+                    "datetime",
+                    "shutil"
+                ],
+                "api_integrations": [],
+                "database": "SQLite (Encrypted Content)",
+                "code_template": "code_exemplars/G08/T12/digital_vault_system.py"
+            },
+            {
+                "project_id": "T13",
+                "project_name": "Password Manager",
+                "description": "A secure application specifically designed for storing, managing, and generating login credentials (usernames, passwords, URLs). Includes features for password strength analysis and checking against known data breaches.",
+                "components": [
+                    {
+                        "component_id": "C01",
+                        "component_name": "Password Management System",
+                        "features": [
+                            "Securely store website/application login credentials (username, password, URL, notes).",
+                            "Encrypt stored passwords using strong AES encryption, derived from a master password.",
+                            "Built-in secure password generator for creating strong, random passwords.",
+                            "Evaluate the strength of existing passwords.",
+                            "Integrates with Have I Been Pwned (HIBP) API to check if passwords appear in known data breaches.",
+                            "Organize credentials using folders or tags.",
+                            "Easy retrieval and copying of credentials."
+                        ]
+                    }
+                ],
+                "core_features": [
+                    "Requires master password authentication, securely hashed (e.g., Argon2, PBKDF2).",
+                    "Potential for multi-factor authentication (MFA/2FA) integration (conceptual).",
+                    "Maintains access logs and audit trails for security monitoring.",
+                    "Features for creating encrypted backups and secure recovery procedures.",
+                    "Automatic session timeout or locking for enhanced security after inactivity."
+                ],
+                "required_libraries": [
+                    "sqlite3",
+                    "cryptography",
+                    "json",
+                    "os",
+                    "hashlib",
+                    "requests",
+                    "pyinputplus",
+                    "datetime",
+                    "shutil"
+                ],
+                "api_integrations": [
+                    "Have I Been Pwned (HIBP) API (https://haveibeenpwned.com/api/v3)"
+                ],
+                "database": "SQLite (Encrypted Content)",
+                "code_template": "code_exemplars/G08/T13/password_manager.py"
+            }
+        ]
+    },
+    {
+        "template_group_id": "G09",
+        "group_name": "Text Analysis Tools",
+        "description": "Utilities leveraging Natural Language Processing (NLP) techniques to analyze, understand, and process textual content for insights.",
+        "templates": [
+            {
+                "project_id": "T14",
+                "project_name": "Text Analysis Suite",
+                "description": "An NLP toolkit offering capabilities for sentiment analysis (determining emotional tone) and automatic text summarization (condensing long documents). Useful for analyzing customer feedback, research papers, news articles, and other text data.",
+                "components": [
+                    {
+                        "component_id": "C01",
+                        "component_name": "Sentiment Analyzer",
+                        "features": [
+                            "Analyze input text to determine overall sentiment polarity (positive, negative, neutral).",
+                            "Provides sentiment scores indicating confidence levels.",
+                            "Potential for basic emotion detection (e.g., joy, anger, sadness) using appropriate models/libraries.",
+                            "Visualize sentiment distribution or scores using charts (Matplotlib).",
+                            "Useful for opinion mining and feedback analysis."
+                        ]
+                    },
+                    {
+                        "component_id": "C02",
+                        "component_name": "Text Summarizer",
+                        "features": [
+                            "Automatically generate concise summaries of longer text documents or articles.",
+                            "Supports extractive summarization (selecting key sentences) or potentially abstractive (generating new summary sentences - more advanced).",
+                            "Allows configuration of desired summary length (e.g., percentage or number of sentences).",
+                            "Includes key phrase extraction to highlight important terms.",
+                            "Ideal for quickly understanding the gist of articles, papers, or reports. TL;DR generation."
+                        ]
+                    }
+                ],
+                "core_features": [
+                    "Support for processing text in multiple languages (requires appropriate NLP models/libraries like NLTK with multi-language support).",
+                    "Ability to import text directly from files (.txt) or fetch content from URLs.",
+                    "Capable of performing batch analysis on multiple text inputs.",
+                    "Option to export analysis results (sentiment scores, summaries) to CSV or JSON formats.",
+                    "Optional integration with Free Dictionary API for defining key terms found during analysis."
+                ],
+                "required_libraries": [
+                    "nltk",
+                    "json",
+                    "re",
+                    "os",
+                    "matplotlib",
+                    "pyinputplus",
+                    "csv",
+                    "requests",
+                    "beautifulsoup4"
+                ],
+                "api_integrations": [
+                    "Optional: Free Dictionary API (https://api.dictionaryapi.dev/api/v2/entries/en/<word>)"
+                ],
+                "database": "None (Optional JSON storage for results/config)",
+                "code_template": "code_exemplars/G09/T14/text_analysis_suite.py"
+            }
+        ]
+    },
+    {
+        "template_group_id": "G10",
+        "group_name": "Games",
+        "description": "Simple, interactive command-line games for entertainment or as programming exercises.",
+        "templates": [
+            {
+                "project_id": "T15",
+                "project_name": "Number Guessing Game",
+                "description": "A classic interactive console game where the computer thinks of a random number within a specified range, and the player attempts to guess it with feedback (higher/lower). Includes difficulty levels and scoring.",
+                "components": [
+                    {
+                        "component_id": "C01",
+                        "component_name": "Number Guesser Game Logic",
+                        "features": [
+                            "Computer generates a secret random number.",
+                            "User inputs guesses via a command-line interface.",
+                            "Provides feedback ('Too high', 'Too low', 'Correct!').",
+                            "Multiple difficulty levels (adjusting the number range or guess limit).",
+                            "Optional intelligent hint system based on remaining range.",
+                            "Tracks the number of guesses for scoring.",
+                            "Maintains a high score list or leaderboard (optional, stored in JSON).",
+                            "Tracks game statistics (wins, losses, average guesses).",
+                            "Potential for time challenge modes."
+                        ]
+                    }
+                ],
+                "core_features": [],
+                "required_libraries": [
+                    "random",
+                    "json",
+                    "os",
+                    "datetime",
+                    "matplotlib",
+                    "pyinputplus"
+                ],
+                "api_integrations": [],
+                "database": "None (Optional JSON for scores/stats)",
+                "code_template": "code_exemplars/G10/T15/number_guesser_game.py"
+            }
+        ]
+    }
+]
