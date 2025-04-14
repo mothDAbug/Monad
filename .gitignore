@@ -172,3 +172,10 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+
+#Monad files
+AgenticProjects/
+chroma_db/
+artifacts/
+agent_log.txt
