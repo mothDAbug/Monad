@@ -1,0 +1,41 @@
+# Project: `{PROJECT_NAME}`
+
+A command-line tool for `{BRIEF_PURPOSE}`.
+
+**Main Script:** `{SCRIPT_NAME}`
+
+## Prerequisites
+- Python 3.x (check version requirements if applicable)
+
+## Setup
+
+1. **Clone the repository (if applicable):**
+    ```bash
+    git clone <your-repo-url>
+    cd {PROJECT_FOLDER_NAME}
+    ```
+
+2. **Set up a virtual environment (recommended):**
+    ```bash
+    python -m venv venv
+    # Windows
+    .\venv\Scripts\activate
+    # macOS/Linux
+    source venv/bin/activate
+    ```
+
+3. **Install dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4. **Set environment variables (if needed):**
+    ```bash
+    # Instructions for setting up environment variables
+    ```
+
+## Usage
+
+Run the main script to get started:
+```bash
+python {SCRIPT_NAME} --help

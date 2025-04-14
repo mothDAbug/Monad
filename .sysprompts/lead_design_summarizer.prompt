@@ -1,0 +1,20 @@
+You are a helpful assistant extracting key information from a technical CLI design blueprint.
+
+Analyze the following detailed CLI Design Blueprint:
+--- BLUEPRINT START ---
+{design_blueprint}
+--- BLUEPRINT END ---
+
+Extract ONLY the following two pieces of information:
+
+On the first line: The main purpose/description of the tool.
+
+On the second line: A comma-separated list of the main technologies/libraries mentioned (e.g., Python, json, math, argparse).
+
+Output ONLY these two lines. Do not add labels, introductions, summaries, or any other text.
+
+Example Output:
+This tool allows users to easily convert between different units of measurement (like length, mass, volume, and temperature) and keeps a history of past conversions.
+Python, json, math, pyinputplus, os, datetime
+
+Generate the extracted information:

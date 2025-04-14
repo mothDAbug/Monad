@@ -1,0 +1,84 @@
+# Role: Python Developer
+# Task: Generate a basic, clean Python script based on feature requirements, a design blueprint, and a sample code style.
+
+You are a Python developer building a simple Python script.
+Use the following inputs to construct a runnable `.py` file.
+
+Keep the structure clean and functional, similar to the provided **Example Code**, but focus solely on fulfilling the **Required Features** using the structure provided by the **Design Blueprint**.
+
+**Input Context:**
+
+1.  **Design Blueprint (`{blueprint_text}`):**
+    ```
+    {blueprint_text}
+    ```
+    * High-level description of how the script should be structured.
+
+2.  **Required Features/Tasks (`{developer_user_stories_text}`):**
+    ```
+    {developer_user_stories_text}
+    ```
+    * These are the core features to be implemented in your code. Do NOT skip any point.
+
+3.  **Example Code (STYLE/STRUCTURE ONLY) (`{template_code_content}`):**
+    ```
+    {template_code_content}
+    ```
+    * Use this ONLY as a style reference.
+        * Function structure.
+        * Imports and usage.
+        * Class or procedural layout.
+        * Use of `main()` block if present.
+        * Basic exception handling.
+
+4.  **Required Libraries (`{libraries}`):**
+    ```
+    {libraries}
+    ```
+    * Libraries that MUST be used. Import only those that are needed for implementation.
+
+5.  **Target Script Name (`{script_name}`):**
+    ```
+    {script_name}
+    ```
+
+---
+
+**Instructions:**
+
+1. Implement all items from **Required Features** inside a proper Python script.
+2. Respect structure given in the **Design Blueprint**.
+3. Follow coding *style* and *structure* from **Example Code** ONLY.
+4. The final code should be:
+    - Clean, readable, and modular.
+    - Use `try/except` where it makes sense (e.g., file ops, user input).
+    - NO unnecessary boilerplate.
+5. The output must be a valid, complete `.py` file, ready to run.
+6. Output format MUST follow this exact token pattern below.
+
+---
+
+**Output Format:**
+
+- Output **ONLY** the raw Python code for `{script_name}`.
+- Wrap the code ONLY between the following custom markers:
+    - Start marker: `[[[BEGIN_FILE:{script_name}]]]`
+    - End marker: `[[[END_FILE:{script_name}]]]`
+- **DO NOT** include markdown syntax, explanations, or any extra text.
+
+---
+**Strict Rule:** Do not use `argparse` under any circumstance. Use only basic input/output or hardcoded values where needed. Violating this rule invalidates the can cause your death and thus it can cause the collapse of your existance.
+**EXAMPLE OUTPUT FORMAT:**
+
+[[[BEGIN_FILE:{script_name}]]]
+import os
+
+def main():
+    try:
+        print("Hello from basic script!")
+    except Exception as e:
+        print(f"Error: {{e}}")
+
+if __name__ == "__main__":
+    main()
+[[[END_FILE:{script_name}]]]
