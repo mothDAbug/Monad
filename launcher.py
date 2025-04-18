@@ -1,4 +1,7 @@
 import os
+# HACK, BECAUSE OF MAJOR REFACTORING ISSUES... Change the current working directory
+os.chdir(r'C:\monad\monad-main')
+
 import subprocess
 import sys
 import time
