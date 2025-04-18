@@ -2,6 +2,30 @@ import os
 # HACK, BECAUSE OF MAJOR REFACTORING ISSUES... Change the current working directory
 os.chdir(r'C:\monad\monad-main')
 
+import shutil
+
+source_file = ".env.example"
+dest_file = ".env"
+
+# Check if the destination file (.env) ALREADY exists
+if os.path.exists(dest_file):
+    pass
+else:
+    # If .env DOES NOT exist, proceed to create it
+    print(f"'{dest_file}' not found. Attempting to create from '{source_file}'...")
+
+    # Check if the source file (.env.example) exists before trying to copy
+    if os.path.exists(source_file):
+        try:
+            # Copy the source file to the destination file
+            shutil.copy2(source_file, dest_file)
+            print(f"Successfully created '{dest_file}' from '{source_file}'.")
+        except Exception as e:
+            print(f"Error copying '{source_file}' to '{dest_file}': {e}")
+    else:
+        # Handle the case where the template file itself is missing
+        print(f"Error: Source file '{source_file}' not found. Cannot create '{dest_file}'.")
+
 import subprocess
 import sys
 import time
